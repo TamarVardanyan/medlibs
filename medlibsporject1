@@ -1,0 +1,101 @@
+import random
+
+templates = (input("Enter '1', '2', '3' to select a template if you don't decided enter 'r' for random choice: "))
+
+def first_template():
+
+    number = (input("Enter a number: "))  # I Don't convert to integer cuz this number I will concatenate with strings
+    measure_of_time = input("Measure of time: ")
+    mode_of_transportation = input("Enter mode of transportation: ")
+    adjective = input("Enter adjective (feeling): ")
+    adjective_2 = input("Enter adjective again (feeling): ")
+    noun = input("Enter noun: ")
+    color = input("Enter a color: ")
+    part_of_body = input("Enter part of body: ")
+    number_2 = input("Enter a number again: ")
+    noun_2 = input("Enter a noun again: ")
+    noun_3 = input("Enter a noun again: ")
+    part_of_body_2 = input("Enter a part of body again: ")
+    verb = input("Enter a verb: ")
+    noun_4 = input("Enter a noun again: ")
+    adjective_3 = input("Enter adjective again (feeling): ")
+    silly_word = input("Enter a silly word: ")
+    return f'''
+    It was about {number} {measure_of_time} ago when I arrived at the hospital in a {mode_of_transportation}. 
+    The hospital is a/an {adjective} place, there are a lot of {adjective_2} {noun} here. 
+    There are nurses here who have {color} {part_of_body}. If someone wants to come into my room I told them 
+    that they have to (verb) first. I’ve decorated my room with {number_2} {noun_2}. Today I talked to a doctor and 
+    they were wearing a {noun_3} on their {part_of_body_2}. I heard that all doctors {verb} {noun_4} every day for 
+    breakfast. The most {adjective_3} thing about being in the hospital is the {silly_word} {noun} ! 
+         '''
+def second_template():
+
+    person_name = input("Enter person name: ")
+    noun = input("Enter noun: ")
+    adjective = input("Enter adjective (feeling): ")
+    adjective_2 = input("Enter adjective again (feeling): ")
+    verb_2 = input("Enter a verb again: ")
+    verb = input("Enter verb (ending in ing): ")
+    adverb = input("Enter adverb (ending in ly: ")
+    measure_of_time = input("Enter measure of time: ")
+    color = input("Enter a color: ")
+    animal = input("Enter an animal: ")
+    number = input("Enter number: ")
+    silly_word = input("Enter silly word: ")
+    noun_2 = input("Enter noun again: ")
+    return f'''
+    This weekend I am going camping with {person_name}. I packed my lantern, sleeping bag,
+    and {noun}. I am so {adjective} to {verb} in a tent. I am {adjective_2} we might see a(n)
+    {animal}, I hear they’re kind of dangerous. While we’re camping, we are going to hike, fish, and {verb_2}.
+    I have heard that the {color} lake is great for {verb}. Then we will {adverb} hike through the forest
+    for {number} {measure_of_time}. If I see a {color} {animal} while hiking, I am going to bringit home as a pet!
+    At night we will tell {number} {silly_word} stories and roast {noun_2} around the campfire!!
+          '''
+def third_template():
+
+    person_name = input("Enter person name: ")
+    adjective = input("Enter adjective (feeling): ")
+    color = input("Enter a color: ")
+    animal = input("Enter an animal: ")
+    place = input("Enter a place: ")
+    adjective_2 = input("Enter adjective again (feeling): ")
+    magical_creature = input("Enter magical creature (plural): ")
+    adjective_3 = input("Enter adjective again (feeling): ")
+    magical_creature_2 = input("Enter magical creature again (plural): ")
+    room_in_a_house = input("Enter room in a house: ")
+    noun = input("Enter noun: ")
+    noun_2 = input("Enter noun again: ")
+    noun_3 = input("Enter noun again (plural): ")
+    adjective_4 = input("Enter adjective again (feeling): ")
+    noun_4 = input("Enter noun again (plural): ")
+    number = input("Enter a number: ")
+    measure_of_time = input("Enter measure of time: ")
+    verb = input("Enter verb (ending in ing): ")
+    adjective_5 = input("Enter adjective again (feeling): ")
+    noun_5 = input("Enter noun again (plural): ")
+    return f'''
+    Dear {person_name}, I am writing to you from a {adjective} castle in an enchanted forest. I
+    found myself here one day after going for a ride on a {color} {animal} in {place}. There are {adjective_2}
+    {magical_creature} and {adjective_3} {magical_creature_2} here! In the {room_in_a_house} there is a pool full
+    of {noun}. I fall asleep each night on a {noun_2} of {noun_3} and dream of {adjective_4} {noun_4}. It
+    feels as though I have lived here for {number} {measure_of_time}. I hope one day you can visit, although the
+    only way to get here now is {verb} on a {adjective_5} {noun_5}!!
+         '''
+
+try:
+    def choices (choice):
+      if choice == '1':
+          print(first_template())
+      elif choice == '2':
+          print(second_template())
+      elif choice == '3':
+          print(third_template())
+      elif choice!='r':
+        print("You can use only '1, 2 or 3, or 'r'")
+    choices (templates)
+    if templates == "r":
+      a_lst = ['1','2','3']
+      a = random.choice(a_lst)
+      choices (a)
+except:
+     print("Start again!")
